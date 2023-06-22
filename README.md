@@ -34,18 +34,19 @@ rank,	name,	year,	rating,	genre	certificate	run_time	tagline	budget	box_office	c
 10) casts: This column comprises all the cast of each movie, therefore the data type chosen when creating the imdb table on Postgreql was # VARCHAR.
 11) directors: This column comprises directors, there were more than one director for some movie, therefore the data type chosen when creating the imdb table on Postgreql was # VARCHAR.
 12) writers: This column comprises writers, there were more than one director for some movie, therefore the data type chosen when creating the imdb table on Postgreql was # VARCHAR.
+# SEE QUERY BELOW
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/ce9cc27c-e4d6-4495-8aa9-478b4e944d52)
 
 # DATA ANALYSIS
 
-1) TO KNOW TOP 5 YEARS OF MAXIMUM MOVIE RELEAS
+1) TO KNOW TOP 5 YEARS OF MAXIMUM MOVIE RELEASED
    This is and important analysis to know the trend of movie releases over the years and determine whether they have increased or decreased, we need to identify the top five years with the highest number of movie releases. This information will provide insights into the overall pattern and help us understand the factors that contribute to the fluctuation in movie releases. By examining the data, we can ascertain if there has been a significant increase or decrease in movie production and delve deeper into the reasons behind these trends.
-  #QUERY
-SELECT COUNT(name) AS numberofmovies, year
-FROM imdb
-GROUP BY year
-ORDER BY numberofmovies DESC
-LIMIT 5;
+  # QUERY
+```SQL SELECT COUNT(name) AS numberofmovies, year
+       FROM imdb
+       GROUP BY year
+       ORDER BY numberofmovies DESC
+       LIMIT 5; ```
 
 
 
