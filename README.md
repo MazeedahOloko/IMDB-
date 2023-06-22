@@ -34,21 +34,78 @@ rank,	name,	year,	rating,	genre	certificate	run_time	tagline	budget	box_office	c
 10) casts: This column comprises all the cast of each movie, therefore the data type chosen when creating the imdb table on Postgreql was # VARCHAR.
 11) directors: This column comprises directors, there were more than one director for some movie, therefore the data type chosen when creating the imdb table on Postgreql was # VARCHAR.
 12) writers: This column comprises writers, there were more than one director for some movie, therefore the data type chosen when creating the imdb table on Postgreql was # VARCHAR.
-# SEE QUERY BELOW
+* SEE QUERY BELOW
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/ce9cc27c-e4d6-4495-8aa9-478b4e944d52)
 
 # DATA ANALYSIS
 
 1) TO KNOW TOP 5 YEARS OF MAXIMUM MOVIE RELEASED
    This is and important analysis to know the trend of movie releases over the years and determine whether they have increased or decreased, we need to identify the top five years with the highest number of movie releases. This information will provide insights into the overall pattern and help us understand the factors that contribute to the fluctuation in movie releases. By examining the data, we can ascertain if there has been a significant increase or decrease in movie production and delve deeper into the reasons behind these trends.
-* QUERY
+* QUERY                                                      
 ```SQL SELECT COUNT(name) AS numberofmovies, year
        FROM imdb
        GROUP BY year
        ORDER BY numberofmovies DESC
        LIMIT 5; 
 ```
+*VISUALS
+![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/c4cf158a-d5b1-498f-b674-753eba1ff667)
 
+2) TO KNOW GENRE OF MOVIES RELEASED THE MOST
+   This analysis is important because I want to get an insight as to what genre(if there is) is released the most on IMDB movies. There was a lot of data cleaning here, I had to first split the genre column into three column to understand what to do, this is because the comma already joined all the genre as one and I wasnt liking the result of using this code:  
+``` SELECT genre, COUNT(*) AS total_count
+    FROM IMDB
+    GROUP BY genre;
+```
+![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/f80a85f3-3b0a-4c7f-b920-50c61d04f9c8)
+
+I wanted to be able to count all the Drama, crime, biography,,,,etc as one figure
+* I firstly had to get rid of the comma and let each be in a column
+``` SELECT 
+        SPLIT_PART(genre, ',', 1) AS genre,
+        SPLIT_PART(genre, ',', 2) AS genre,
+        SPLIT_PART(genre, ',', 3) AS genre
+    FROM imdb;
+```
+![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/57da9c83-e4d7-42fc-9790-1c0c8fdd4bcb)
+
+* But since I want to get the total of each genre I would need a way to join each column as one, so sql can count each genre. see below
+```SELECT genre, 
+   COUNT (*) AS totalcount
+   FROM(
+	     SELECT
+             SPLIT_PART(genre, ',', '1') AS genre	
+        FROM imdb
+   UNION ALL 
+         SELECT
+             SPLIT_PART(genre, ',', '2') AS genre	
+        FROM imdb
+   UNION ALL
+         SELECT
+              SPLIT_PART(genre, ',', '3') AS genre	
+         FROM imdb
+     ) AS subquery
+   WHERE TRIM(genre) <> ''
+   GROUP BY genre
+   ORDER BY totalcount DESC
+# NoTE: I had to include the WHERE TRIM(genre) <> '', BECAUSE I WAS GETTING RESULT OF A BLANK GENRE BUT WITH NUMBER
+```
+SELECT genre, 
+COUNT (*) AS totalcount
+FROM(
+	SELECT
+         SPLIT_PART(genre, ',', '1') AS genre	
+    FROM imdb
+UNION ALL 
+	SELECT
+         SPLIT_PART(genre, ',', '2') AS genre	
+    FROM imdb
+UNION ALL
+	 SELECT
+         SPLIT_PART(genre, ',', '3') AS genre	
+    FROM imdb
+) AS subquery
+```
 
 
 
