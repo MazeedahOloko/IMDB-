@@ -41,13 +41,13 @@ rank,	name,	year,	rating,	genre	certificate	run_time	tagline	budget	box_office	c
 
 1) TO KNOW TOP 5 YEARS OF MAXIMUM MOVIE RELEASED
    This is and important analysis to know the trend of movie releases over the years and determine whether they have increased or decreased, we need to identify the top five years with the highest number of movie releases. This information will provide insights into the overall pattern and help us understand the factors that contribute to the fluctuation in movie releases. By examining the data, we can ascertain if there has been a significant increase or decrease in movie production and delve deeper into the reasons behind these trends.
-  # QUERY
+* QUERY
 ```SQL SELECT COUNT(name) AS numberofmovies, year
        FROM imdb
        GROUP BY year
        ORDER BY numberofmovies DESC
-       LIMIT 5; ```
-
+       LIMIT 5; 
+```
 
 
 
