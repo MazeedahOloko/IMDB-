@@ -87,28 +87,162 @@ I wanted to be able to count all the Drama, crime, biography,,,,etc as one figur
      ) AS subquery
    WHERE TRIM(genre) <> ''
    GROUP BY genre
-   ORDER BY totalcount DESC
+   ORDER BY totalcount DESC;
+```
+![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/18de0719-e27c-48ef-92a3-e79578b362a0)
+*VISUALS
+![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/de697f9e-05d2-4c8b-a135-b80b7a6f592e)
+
 # NoTE: I had to include the WHERE TRIM(genre) <> '', BECAUSE I WAS GETTING RESULT OF A BLANK GENRE BUT WITH NUMBER
-```
-SELECT genre, 
-COUNT (*) AS totalcount
-FROM(
+``` SELECT genre, 
+    COUNT (*) AS totalcount
+    FROM(
 	SELECT
-         SPLIT_PART(genre, ',', '1') AS genre	
-    FROM imdb
-UNION ALL 
-	SELECT
-         SPLIT_PART(genre, ',', '2') AS genre	
-    FROM imdb
-UNION ALL
+             SPLIT_PART(genre, ',', '1') AS genre	
+        FROM imdb
+     UNION ALL 
+          SELECT
+              SPLIT_PART(genre, ',', '2') AS genre	
+          FROM imdb
+     UNION ALL
 	 SELECT
-         SPLIT_PART(genre, ',', '3') AS genre	
+             SPLIT_PART(genre, ',', '3') AS genre	
+         FROM imdb
+      ) AS subquery
+   GROUP BY genre
+   ORDER BY totalcount DESC
+```
+![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/c661cf82-3521-4c3d-87d0-33324d63b1ed)
+
+3) TOP 10 MOVIES WITH THE HIGHEST RATING AND THE YEAR
+``` SELECT name, rating, year
     FROM imdb
-) AS subquery
+    ORDER BY rating DESC
+    LIMIT 10;
+```
+![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/f32f9c6d-efe3-48c2-811f-e6743a824b00)
+
+4) JJJJ
+```SELECT certificate, COUNT(*) AS total_count
+   FROM IMDB
+   GROUP BY certificate
+   ORDER BY total_count DESC;
+```
+   ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/84fe7924-bb19-4249-9e82-c78e38d1bd54)
+
+5) TOTAL BUDGET PER MOVIE
+    I did a lot of data cleaning to get this figure to.
+   *Firstly I had TO CHECK IF THERE ARE OTHER CHARACTERS IN MY BUDGET FIGURE
+SELECT budget
+FROM imdb
+WHERE budget <> '' AND TRIM(budget) <> '' AND budget ~ '\D';
+
+![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/0a31c497-0e15-4825-8b5f-63a4e7572e70)
+
+* Query to clean data and get the TOTAL budget for ALL movies
+```SELECT SUM(
+	    CASE
+                 WHEN budget LIKE '$%' THEN CAST(REPLACE(budget, '$', '') AS NUMERIC)
+                 WHEN budget LIKE 'RF %' THEN CAST(REPLACE(budget, 'RF ', '') AS NUMERIC)
+		 WHEN budget = 'Not Availble' THEN NULL 
+		 WHEN budget ~ '^[0-9.]+$' THEN CAST(budget AS NUMERIC)
+                 ELSE NULL
+		 END) AS Total_budget
+FROM imdb;
+```
+![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/ad158692-807f-497d-8c2f-101613ec2528)
+
+* To Compare BUDGET with RATINGS
+```SELECT SUM(
+	    CASE
+                 WHEN budget LIKE '$%' THEN CAST(REPLACE(budget, '$', '') AS NUMERIC)
+                 WHEN budget LIKE 'RF %' THEN CAST(REPLACE(budget, 'RF ', '') AS NUMERIC)
+		 WHEN budget = 'Not Availble' THEN NULL 
+		 WHEN budget ~ '^[0-9.]+$' THEN CAST(budget AS NUMERIC)
+         ELSE NULL
+		 END) AS calculated_budget , rating
+FROM imdb
+GROUP BY rating
+ORDER BY calculated_budget DESC;
 ```
 
 
+6) TOTAL BOX OFFICE PER MOVIE
+   This analysis is important because BOX OFFICE means the total sales from tickets of movies. Since we already know the budget for each movie, we need this analysis to compare budget to sales(profit), which would be the next analysis after this.
+   * Firstly did a query to see if there are blanks, blanks before a digit and if there are non digit characters in the box_office column for data cleaning.
+```SELECT box_office
+   FROM imdb
+   WHERE box_office <> '' AND TRIM(box_office)<> '' AND box_office ~ '\D';
+```
+![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/db08d3bb-2df1-4b3a-966b-e66224c52e39)
+    *Query to clean the data 
+```SELECT SUM(
+         CASE 
+             WHEN box_office = 'Not Available' THEN NULL 
+	     WHEN box_office LIKE '$%' THEN CAST(REPLACE(box_office, '$', '') AS NUMERIC)
+	     WHEN box_office Like '%(estimated)' THEN CAST(REPLACE(box_office, '(estimated)', '') AS NUMERIC)
+	     WHEN box_office ~ '^[0-9.]+$' THEN CAST(box_office AS NUMERIC)
+           ELSE NULL
+	   END) AS TOTALbox_office 
+FROM imdb;
+```
+![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/ef23e1f8-e0e8-4bb8-9b3d-410a542c025c)
 
+
+8) TOTAL BOX_OFFICE WITH RATING
+```SELECT SUM(
+             CASE 
+                WHEN box_office = 'Not Available' THEN NULL 
+	        WHEN box_office LIKE '$%' THEN CAST(REPLACE(box_office, '$', '') AS NUMERIC)
+	        WHEN box_office Like '%(estimated)' THEN CAST(REPLACE(box_office, '(estimated)', '') AS NUMERIC)
+	        WHEN box_office ~ '^[0-9.]+$' THEN CAST(box_office AS NUMERIC)
+	        ELSE NULL
+	        END) AS TOTALbox_office, rating
+   FROM imdb
+   GROUP BY rating
+   ORDER by rating DESC;
+```
+
+7) profit
+![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/b765df63-8845-4521-96eb-bfd80507dcef)
+
+*Check Profit compared with rating
+```SELECT SUM(
+	    CASE
+        WHEN budget LIKE '$%' THEN CAST(REPLACE(budget, '$', '') AS NUMERIC)
+         WHEN budget LIKE 'RF %' THEN CAST(REPLACE(budget, 'RF ', '') AS NUMERIC)
+		 WHEN budget = 'Not Availble' THEN NULL 
+		 WHEN budget ~ '^[0-9.]+$' THEN CAST(budget AS NUMERIC)
+         ELSE NULL
+		 END) AS TOTAL_budget ,
+      SUM(
+             CASE 
+                WHEN box_office = 'Not Available' THEN NULL 
+	        WHEN box_office LIKE '$%' THEN CAST(REPLACE(box_office, '$', '') AS NUMERIC)
+	        WHEN box_office Like '%(estimated)' THEN CAST(REPLACE(box_office, '(estimated)', '') AS NUMERIC)
+	        WHEN box_office ~ '^[0-9.]+$' THEN CAST(box_office AS NUMERIC)
+	        ELSE NULL
+	        END) AS TOTALbox_office,
+		SUM(
+             CASE 
+                WHEN box_office = 'Not Available' THEN NULL 
+	        WHEN box_office LIKE '$%' THEN CAST(REPLACE(box_office, '$', '') AS NUMERIC)
+	        WHEN box_office Like '%(estimated)' THEN CAST(REPLACE(box_office, '(estimated)', '') AS NUMERIC)
+	        WHEN box_office ~ '^[0-9.]+$' THEN CAST(box_office AS NUMERIC)
+	        ELSE NULL
+	        END)  - SUM(
+	    CASE
+        WHEN budget LIKE '$%' THEN CAST(REPLACE(budget, '$', '') AS NUMERIC)
+         WHEN budget LIKE 'RF %' THEN CAST(REPLACE(budget, 'RF ', '') AS NUMERIC)
+		 WHEN budget = 'Not Availble' THEN NULL 
+		 WHEN budget ~ '^[0-9.]+$' THEN CAST(budget AS NUMERIC)
+         ELSE NULL
+		 END) AS profit,
+		rating
+FROM imdb
+GROUP BY rating
+ORDER BY profit DESC;
+```
 
 
 
