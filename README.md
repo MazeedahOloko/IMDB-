@@ -2,9 +2,8 @@
 INTRODUCTION
 # ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/15b286ec-7377-4288-8d92-d39709fe29af)
 The Internet Movie Database (IMDb) is the largest, most comprehensive movie database on the web. It offers an extensive database of movie, TV show, and cast information. The site was officially launched in 1990 and is now owned by Amazon.com. IMDb is an extremely detailed and rich source of film data that features top movies, news, reviews, movie trailers, showtimes, DVD movie reviews, celebrity profiles, and more. If you’ve ever researched a movie or actor, you’ve probably landed on IMDb. The primary objective of this project was to analyze the data in order to gain insights into IMDB (Internet Movie Database) and provide suggestions for potential improvements, aiming for the growth and expansion of the platform. Through the analysis, we sought to uncover valuable information and propose actionable recommendations to enhance the overall performance and user experience of IMDB.
-# PROBLEM STATEMENT
-The IMDB dataset is a collection of 250movies in the IMDB database ranging between several years. It contains a wide range of information about movie name, year,rating,genre	certificate,	run_time,	tagline	budget,	box_office,	casts,directors, and writers of each movie. The dataset is designed to help analysts and researchers better understand the IMDB database and also make suggestion for improvement.
-
+PROBLEM STATEMENT
+The IMDB dataset is a collection of 250movies in the IMDB database ranging between several years. It contains a wide range of information about movie name, year,rating,genre,certificate,run_time,tagline,budget,box_office,casts,directors and writers of each movie. The dataset is designed to help analysts and researchers better understand the IMDB database and also make suggestion for improvement.
 Data pervades every aspect of our lives, yet in its raw form, it is often inadequate for deriving valuable insights that effectively address business challenges. Therefore, when data is collected, it is crucial to undergo the process of data cleaning. By ensuring data cleanliness, productivity is enhanced, and the decision-making process benefits from the availability of high-quality information. In this project, I undertook a Data Cleaning Project using SQL to further develop my data manipulation skills.
 In this project, my objective is to assist IBDM in gaining deeper insights into their database platform and maximizing growth opportunities. I will accomplish this by addressing the following business questions and providing comprehensive answers and recommendations:
 1. TO KNOW WHICH YEAR MOVIES WAS RELEASED
@@ -93,7 +92,7 @@ I wanted to be able to count all the Drama, crime, biography,,,,etc as one figur
 *VISUALS
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/de697f9e-05d2-4c8b-a135-b80b7a6f592e)
 
-# NoTE: I had to include the WHERE TRIM(genre) <> '', BECAUSE I WAS GETTING RESULT OF A BLANK GENRE BUT WITH NUMBER
+NOTE: I had to include the WHERE TRIM(genre) <> '', BECAUSE I WAS GETTING RESULT OF A BLANK GENRE BUT WITH NUMBER
 ``` SELECT genre, 
     COUNT (*) AS totalcount
     FROM(
@@ -168,7 +167,7 @@ ORDER BY calculated_budget DESC;
 
 
 6) TOTAL BOX OFFICE PER MOVIE
-   This analysis is important because BOX OFFICE means the total sales from tickets of movies. Since we already know the budget for each movie, we need this analysis to compare budget to sales(profit), which would be the next analysis after this.
+   This analysis is important because BOX OFFICE means the total sales from tickets of movies. Since I already know the budget for each movie, I need this analysis to compare budget to sales(profit), which would be the next analysis after this.
    * Firstly did a query to see if there are blanks, blanks before a digit and if there are non digit characters in the box_office column for data cleaning.
 ```SELECT box_office
    FROM imdb
@@ -203,7 +202,7 @@ FROM imdb;
    ORDER by rating DESC;
 ```
 
-7) profit
+7) PROFIT
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/b765df63-8845-4521-96eb-bfd80507dcef)
 
 *Check Profit compared with rating
