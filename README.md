@@ -47,6 +47,7 @@ rank,	name,	year,	rating,	genre	certificate	run_time	tagline	budget	box_office	c
 # DATA ANALYSIS
 
 1) TO KNOW TOP 5 YEARS OF MAXIMUM MOVIE RELEASED
+   
    This is and important analysis to know the trend of movie releases over the years and determine whether they have increased or decreased, we need to identify the top five years with the highest number of movie releases. This information will provide insights into the overall pattern and help us understand the factors that contribute to the fluctuation in movie releases. By examining the data, we can ascertain if there has been a significant increase or decrease in movie production and delve deeper into the reasons behind these trends.
 * QUERY                                                      
 ```SQL SELECT COUNT(name) AS numberofmovies, year
@@ -59,6 +60,7 @@ rank,	name,	year,	rating,	genre	certificate	run_time	tagline	budget	box_office	c
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/c4cf158a-d5b1-498f-b674-753eba1ff667)
 
 2) TO KNOW GENRE OF MOVIES RELEASED THE MOST
+   
    This analysis is important because I want to get an insight as to what genre(if there is) is released the most on IMDB movies. There was a lot of data cleaning here, I had to first split the genre column into three column to understand what to do, this is because the comma already joined all the genre as one and I wasnt liking the result of using this code:  
 ``` SELECT genre, COUNT(*) AS total_count
     FROM IMDB
@@ -130,6 +132,7 @@ NOTE: I had to include the WHERE TRIM(genre) <> '', BECAUSE I WAS GETTING RESULT
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/f32f9c6d-efe3-48c2-811f-e6743a824b00)
 
 4) TOTAL NUMBER OF CERTIFICATE
+   
 ```SELECT certificate, COUNT(*) AS total_count
    FROM IMDB
    GROUP BY certificate
@@ -138,11 +141,13 @@ NOTE: I had to include the WHERE TRIM(genre) <> '', BECAUSE I WAS GETTING RESULT
    ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/84fe7924-bb19-4249-9e82-c78e38d1bd54)
 
 5) TOTAL BUDGET PER MOVIE
+   
     I did a lot of data cleaning to get this figure to.
    *Firstly I had TO CHECK IF THERE ARE OTHER CHARACTERS IN MY BUDGET FIGURE
-SELECT budget
-FROM imdb
-WHERE budget <> '' AND TRIM(budget) <> '' AND budget ~ '\D';
+```SELECT budget
+  FROM imdb
+  WHERE budget <> '' AND TRIM(budget) <> '' AND budget ~ '\D';
+```
 
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/0a31c497-0e15-4825-8b5f-63a4e7572e70)
 
@@ -175,6 +180,7 @@ ORDER BY calculated_budget DESC;
 
 
 6) TOTAL BOX OFFICE PER MOVIE
+   
    This analysis is important because BOX OFFICE means the total sales from tickets of movies. Since I already know the budget for each movie, I need this analysis to compare budget to sales(profit), which would be the next analysis after this.
    * Firstly did a query to see if there are blanks, blanks before a digit and if there are non digit characters in the box_office column for data cleaning.
 ```SELECT box_office
