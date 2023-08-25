@@ -1,4 +1,3 @@
-[IMDB Top 250 Movies.csv](https://github.com/MazeedahOloko/IMDB-/files/12443692/IMDB.Top.250.Movies.csv)[IMDB Top 250 Movies.csv](https://github.com/MazeedahOloko/IMDB-/files/12443681/IMDB.Top.250.Movies.csv)
 # IMDB DATA ANALYSIS
 
 INTRODUCTION
@@ -10,8 +9,7 @@ PROBLEM STATEMENT
 
 The IMDB dataset is a collection of 250movies in the IMDB database ranging between several years. It contains a wide range of information about movie name, year,rating,genre,certificate,run_time,tagline,budget,box_office,casts,directors and writers of each movie. The dataset is designed to help analysts and researchers better understand the IMDB database and also make suggestion for improvement. I got the dataset from [Kaggle.com](https://www.kaggle.com/)
 
-[Uploading IMDB Top 250 Movies.csv…]()
-
+Data set: [IMDB Top 250 Movies.csv]
 
 Data pervades every aspect of our lives, yet in its raw form, it is often inadequate for deriving valuable insights that effectively address business challenges. Therefore, when data is collected, it is crucial to undergo the process of data cleaning. By ensuring data cleanliness, productivity is enhanced, and the decision-making process benefits from the availability of high-quality information. In this project, I undertook a Data Cleaning Project using SQL to further develop my data manipulation skills.
 In this project, my objective is to improve my data cleaning and also my SQL query applivation. I will accomplish this by addressing the following business questions and providing comprehensive answers and recommendations:
