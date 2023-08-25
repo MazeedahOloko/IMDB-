@@ -1,4 +1,5 @@
-[IMDB Top 250 Movies.csv](https://github.com/MazeedahOloko/IMDB-/files/12443692/IMDB.Top.250.Movies.csv)[IMDB Top 250 Movies.csv](https://github.com/MazeedahOloko/IMDB-/files/12443681/IMDB.Top.250.Movies.csv)# IMDB DATA ANALYSIS
+[IMDB Top 250 Movies.csv](https://github.com/MazeedahOloko/IMDB-/files/12443692/IMDB.Top.250.Movies.csv)[IMDB Top 250 Movies.csv](https://github.com/MazeedahOloko/IMDB-/files/12443681/IMDB.Top.250.Movies.csv)
+# IMDB DATA ANALYSIS
 
 INTRODUCTION
 
@@ -250,8 +251,8 @@ FROM imdb
 GROUP BY rating
 ORDER BY profit DESC;
 ```
-COCLUSION
-This ws a very tough data to clean for me. And it helped me improved my data cleaning as well as my SQL query knowledge.
+# CONCLUSION
+This was a very tough data to clean for me, as it was my first. But it helped me improved my data cleaning as well as my SQL query knowledge.
 
 
 
