@@ -232,7 +232,7 @@ FROM imdb;
 
    ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/34d8d9db-98be-4c6c-9eda-a356c450a81c)
 
-*Check Profit compared with rating
+* Check Profit compared with rating
 ```SELECT SUM(
 	    CASE
         WHEN budget LIKE '$%' THEN CAST(REPLACE(budget, '$', '') AS NUMERIC)
@@ -270,8 +270,7 @@ GROUP BY rating
 ORDER BY profit DESC;
 ```
 # CONCLUSION
-This was a very tough data to clean for me, as it was my first. But it helped me improved my data cleaning as well as my SQL query knowledge.
-
+In conclusion, tackling this dataset proved to be a formidable challenge, especially given that it was my first experience with data cleaning. However, I can confidently state that the process significantly enhanced both my data cleansing skills and my proficiency in crafting effective SQL queries. This experience has undoubtedly contributed to my growth in handling complex data tasks.
 
 
 
