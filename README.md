@@ -149,8 +149,9 @@ NOTE: I had to include the WHERE TRIM(genre) <> '', BECAUSE I WAS GETTING RESULT
 
 5) TOTAL BUDGET PER MOVIE
    
-    I did a lot of data cleaning to get this figure to.
-   *Firstly I had TO CHECK IF THERE ARE OTHER CHARACTERS IN MY BUDGET FIGURE
+   I invested significant effort in refining this figure through a series of data cleaning steps.
+   * To begin, I meticulously examined the budget figures to identify and address any instances of non-numeric characters.
+     
 ```SELECT budget
   FROM imdb
   WHERE budget <> '' AND TRIM(budget) <> '' AND budget ~ '\D';
