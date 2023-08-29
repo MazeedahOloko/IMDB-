@@ -104,8 +104,8 @@ I wanted to be able to count all the Drama, crime, biography,,,,etc as one figur
    GROUP BY genre
    ORDER BY totalcount DESC;
 ```
-![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/28647654-db60-4643-babd-f5cb29788de5)
 *VISUALS
+![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/28647654-db60-4643-babd-f5cb29788de5)
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/986076b8-7fdf-4aa7-8b59-d224d9e94646)
 
 NOTE: I had to include the WHERE TRIM(genre) <> '', BECAUSE I WAS GETTING RESULT OF A BLANK GENRE BUT WITH NUMBER
