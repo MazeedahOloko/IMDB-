@@ -1,4 +1,4 @@
-# IMDB DATA ANALYSIS
+# IMDB DATA CLEANING
 
 # INTRODUCTION
 
@@ -105,7 +105,6 @@ I wanted to be able to count all the Drama, crime, biography,,,,etc as one figur
    ORDER BY totalcount DESC;
 ```
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/a77eb2b1-068e-456f-bd25-a108d7e534c8)
-
 *VISUALS
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/2374b975-3d67-4d9a-a2c6-87c3d202c0c4)
 
@@ -174,7 +173,6 @@ FROM imdb;
 ```
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/22119b55-46f6-4c57-b62f-401cec77c4d5)
 
-![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/ad158692-807f-497d-8c2f-101613ec2528)
 
 * To Compare BUDGET with RATINGS
 ```SELECT SUM(
@@ -233,8 +231,6 @@ FROM imdb;
 7) PROFIT
 
    ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/34d8d9db-98be-4c6c-9eda-a356c450a81c)
-
-![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/b765df63-8845-4521-96eb-bfd80507dcef)
 
 *Check Profit compared with rating
 ```SELECT SUM(
