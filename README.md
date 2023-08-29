@@ -2,7 +2,6 @@
 
 # INTRODUCTION
 
-![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/1d588eca-c36c-4173-8f3a-3645b39f58ee)
 
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/15b286ec-7377-4288-8d92-d39709fe29af)
 
@@ -45,6 +44,7 @@ rank,	name,	year,	rating,	genre	certificate	run_time	tagline	budget	box_office	c
 11) directors: This column comprises directors, there were more than one director for some movie, therefore the data type chosen when creating the imdb table on Postgreql was # VARCHAR.
 12) writers: This column comprises writers, there were more than one director for some movie, therefore the data type chosen when creating the imdb table on Postgreql was # VARCHAR.
 * SEE QUERY BELOW
+  
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/ce9cc27c-e4d6-4495-8aa9-478b4e944d52)
 
 # DATA ANALYSIS
