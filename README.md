@@ -2,6 +2,7 @@
 
 # INTRODUCTION
 
+![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/fc420e51-cdc5-476b-b5cb-de3671689376)
 
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/15b286ec-7377-4288-8d92-d39709fe29af)
 
