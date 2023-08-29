@@ -1,4 +1,4 @@
-# IMDB DATA CLEANING
+# IMDB DATA ANALYSIS
 
 # INTRODUCTION
 
@@ -48,7 +48,7 @@ rank,	name,	year,	rating,	genre	certificate	run_time	tagline	budget	box_office	c
   
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/b73347a7-2447-450f-ade6-95a9b326729b)
 
-# DATA ANALYSIS
+# DATA CLEANING AND ANALYSIS
 
 1) TO KNOW TOP 5 YEARS OF MAXIMUM MOVIE RELEASED
    
