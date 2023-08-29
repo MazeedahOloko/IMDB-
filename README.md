@@ -46,7 +46,7 @@ rank,	name,	year,	rating,	genre	certificate	run_time	tagline	budget	box_office	c
 12) writers: This column comprises writers, there were more than one director for some movie, therefore the data type chosen when creating the imdb table on Postgreql was # VARCHAR.
 * SEE QUERY BELOW
   
-![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/ce9cc27c-e4d6-4495-8aa9-478b4e944d52)
+![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/b73347a7-2447-450f-ade6-95a9b326729b)
 
 # DATA ANALYSIS
 
@@ -61,7 +61,8 @@ rank,	name,	year,	rating,	genre	certificate	run_time	tagline	budget	box_office	c
        LIMIT 5; 
 ```
 *VISUALS
-![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/c4cf158a-d5b1-498f-b674-753eba1ff667)
+![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/9c244a81-3e58-4c9e-b26f-e073b38d408b)
+
 
 2) TO KNOW GENRE OF MOVIES RELEASED THE MOST
    
@@ -70,7 +71,8 @@ rank,	name,	year,	rating,	genre	certificate	run_time	tagline	budget	box_office	c
     FROM IMDB
     GROUP BY genre;
 ```
-![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/f80a85f3-3b0a-4c7f-b920-50c61d04f9c8)
+![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/ca611876-0993-4437-8fc8-033169e5910b)
+
 
 I wanted to be able to count all the Drama, crime, biography,,,,etc as one figure
 * I firstly had to get rid of the comma and let each be in a column
@@ -80,7 +82,7 @@ I wanted to be able to count all the Drama, crime, biography,,,,etc as one figur
         SPLIT_PART(genre, ',', 3) AS genre
     FROM imdb;
 ```
-![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/57da9c83-e4d7-42fc-9790-1c0c8fdd4bcb)
+![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/afd09bf8-a43d-4b44-9222-b0c1b0ee1929)
 
 * But since I want to get the total of each genre I would need a way to join each column as one, so sql can count each genre. see below
 ```SELECT genre, 
@@ -102,9 +104,10 @@ I wanted to be able to count all the Drama, crime, biography,,,,etc as one figur
    GROUP BY genre
    ORDER BY totalcount DESC;
 ```
-![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/18de0719-e27c-48ef-92a3-e79578b362a0)
+![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/a77eb2b1-068e-456f-bd25-a108d7e534c8)
+
 *VISUALS
-![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/de697f9e-05d2-4c8b-a135-b80b7a6f592e)
+![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/2374b975-3d67-4d9a-a2c6-87c3d202c0c4)
 
 NOTE: I had to include the WHERE TRIM(genre) <> '', BECAUSE I WAS GETTING RESULT OF A BLANK GENRE BUT WITH NUMBER
 ``` SELECT genre, 
@@ -133,7 +136,8 @@ NOTE: I had to include the WHERE TRIM(genre) <> '', BECAUSE I WAS GETTING RESULT
     ORDER BY rating DESC
     LIMIT 10;
 ```
-![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/f32f9c6d-efe3-48c2-811f-e6743a824b00)
+![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/18142d04-7e2a-45a9-8f94-bb6726eb398c)
+
 
 4) TOTAL NUMBER OF CERTIFICATE
    
@@ -142,7 +146,8 @@ NOTE: I had to include the WHERE TRIM(genre) <> '', BECAUSE I WAS GETTING RESULT
    GROUP BY certificate
    ORDER BY total_count DESC;
 ```
-   ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/84fe7924-bb19-4249-9e82-c78e38d1bd54)
+   ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/6e1c4160-2363-4877-90a2-66fd6229cb69)
+
 
 5) TOTAL BUDGET PER MOVIE
    
@@ -153,7 +158,8 @@ NOTE: I had to include the WHERE TRIM(genre) <> '', BECAUSE I WAS GETTING RESULT
   WHERE budget <> '' AND TRIM(budget) <> '' AND budget ~ '\D';
 ```
 
-![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/0a31c497-0e15-4825-8b5f-63a4e7572e70)
+![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/205f06f4-1611-49a0-94d1-cf86f3ea46ad)
+
 
 * Query to clean data and get the TOTAL budget for ALL movies
 ```SELECT SUM(
@@ -166,6 +172,8 @@ NOTE: I had to include the WHERE TRIM(genre) <> '', BECAUSE I WAS GETTING RESULT
 		 END) AS Total_budget
 FROM imdb;
 ```
+![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/22119b55-46f6-4c57-b62f-401cec77c4d5)
+
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/ad158692-807f-497d-8c2f-101613ec2528)
 
 * To Compare BUDGET with RATINGS
@@ -191,7 +199,8 @@ ORDER BY calculated_budget DESC;
    FROM imdb
    WHERE box_office <> '' AND TRIM(box_office)<> '' AND box_office ~ '\D';
 ```
-![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/db08d3bb-2df1-4b3a-966b-e66224c52e39)
+![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/d6a8b034-41b7-47d5-89b8-4012f4030e32)
+
     *Query to clean the data 
 ```SELECT SUM(
          CASE 
@@ -203,7 +212,8 @@ ORDER BY calculated_budget DESC;
 	   END) AS TOTALbox_office 
 FROM imdb;
 ```
-![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/ef23e1f8-e0e8-4bb8-9b3d-410a542c025c)
+![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/7bf58490-f45e-46a0-bd45-f16dd6a2df38)
+
 
 
 8) TOTAL BOX_OFFICE WITH RATING
@@ -221,6 +231,9 @@ FROM imdb;
 ```
 
 7) PROFIT
+
+   ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/34d8d9db-98be-4c6c-9eda-a356c450a81c)
+
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/b765df63-8845-4521-96eb-bfd80507dcef)
 
 *Check Profit compared with rating
