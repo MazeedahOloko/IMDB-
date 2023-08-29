@@ -126,7 +126,7 @@ NOTE: I had to include the WHERE TRIM(genre) <> '', BECAUSE I WAS GETTING RESULT
    GROUP BY genre
    ORDER BY totalcount DESC
 ```
-![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/c661cf82-3521-4c3d-87d0-33324d63b1ed)
+![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/9d5b1511-edeb-4999-9da2-8c3781dc4a5e)
 
 3) TOP 10 MOVIES WITH THE HIGHEST RATING AND THE YEAR
 ``` SELECT name, rating, year
