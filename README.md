@@ -6,7 +6,7 @@
 
 
 The Internet Movie Database (IMDb) is the largest, most comprehensive movie database on the web. It offers an extensive database of movie, TV show, and cast information. The site was officially launched in 1990 and is now owned by Amazon.com. IMDb is an extremely detailed and rich source of film data that features top movies, news, reviews, movie trailers, showtimes, DVD movie reviews, celebrity profiles, and more. If you’ve ever researched a movie or actor, you’ve probably landed on IMDb. The primary objective of this project is to execute meticulous data cleansing processes aimed at achieving optimal data quality.
-The dataset was sourced from [Kaggle.com](https://www.kaggle.com/), a prominent platform for data science and machine learning enthusiasts. Kaggle is renowned for providing a hub where datasets, competitions, and valuable insights converge. The dataset I obtained from this platform forms the foundation of our project,, providing the raw material from which we initiate comprehensive data cleansing processes. These processes are essential for refining and enhancing the quality of the dataset, ensuring that our subsequent analyses are built on a solid and reliable foundation.
+The dataset was sourced from [Kaggle.com](https://www.kaggle.com/), a prominent platform for data science and machine learning enthusiasts. Kaggle is renowned for providing a hub where datasets, competitions, and valuable insights converge. The dataset I obtained from this platform forms the foundation of this project, providing the raw material from which we initiate comprehensive data cleansing processes. These processes are essential for refining and enhancing the quality of the dataset, ensuring that our subsequent analyses are built on a solid and reliable foundation.
 * Data set: 
 [IMDB Top 250 Movies.csv](https://github.com/MazeedahOloko/IMDB-/files/12443692/IMDB.Top.250.Movies.csv)
 
@@ -15,15 +15,10 @@ In this project, my main is to improve my data cleaning skills and strengthening
 To accomplish this, I will actively engage with the following key business questions. Each question will be thoroughly explored, and detailed answers along with practical recommendations will be provided:
 
 * Data Accuracy Enhancement: How can data inaccuracies be identified and rectified efficiently, ensuring a more reliable dataset?
-
 * Handling Missing Values: What strategies can be employed to effectively manage missing data points, minimizing their impact on analyses and results?
-
 * Standardizing Data Formats: How can disparate data formats be standardized for consistency, enabling seamless integration and analysis?
-
 * Dealing with Outliers: What approach should be taken to identify and handle outliers that could potentially skew the analysis?
-
 * Resolving Data Type Inconsistencies: How can discrepancies in data types be addressed to prevent computational errors and enhance query accuracy?
-
 * Ensuring Data Integrity: What measures can be adopted to ensure that the dataset remains accurate and cohesive during the cleaning process?
 
 By meticulously addressing these questions and implementing tailored solutions, I will fortify my data cleaning skills and adeptness in executing SQL queries. This project will serve as a valuable learning experience, equipping me with the practical knowledge needed to enhance data quality and derive meaningful insights through effective data preparation.
@@ -47,7 +42,7 @@ See text file for Data dictionary [IMDB DATA DICTIONARY.txt](https://github.com/
   
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/b73347a7-2447-450f-ade6-95a9b326729b)
 
-# DATA CLEANING AND ANALYSIS
+# DATA CLEANING
 
 1) TO KNOW TOP 5 YEARS OF MAXIMUM MOVIE RELEASED
    
