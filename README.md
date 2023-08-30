@@ -1,4 +1,4 @@
-# IMDB DATA ANALYSIS
+[IMDB DATA DICTIONARY.txt](https://github.com/MazeedahOloko/IMDB-DATA-ANALYSIS/files/12476268/IMDB.DATA.DICTIONARY.txt)# IMDB DATA ANALYSIS
 
 # INTRODUCTION
 
@@ -31,19 +31,8 @@ I answered this questions by:
 * The ultimate objective is to achieve clean and refined data that is suitable for in-depth analysis. This will enable us to derive precise and significant insights from the data, facilitating accurate decision-making and meaningful discoveries.
 
 # Data Dictionary
-rank,	name,	year,	rating,	genre	certificate	run_time	tagline	budget	box_office	casts	directors	writers.
-1) rank:	This is just a number column, its in serail therefore the data type chosen when creating the imdb table on Postgreql was #SERIAL.
-2) name:	This column comprises the name of each movie, therefore the data type chosen when creating the imdb table on Postgreql was #VARCHAR.
-3) year: This column comprises the year each movie was made, therefore the data type chosen when creating the imdb table on Postgreql was # INTEGER.
-4) rating: This column comprises the numerical values of the rating of each movie, therefore the data type chosen when creating the imdb table on Postgreql was # VARCHAR.
-5) genre: This column comprises genre such as drama,crime, etc of each movie, therefore the data type chosen when creating the imdb table on Postgreql was # VARCHAR.
-6) certificate: This column is what is popularly known as rating of each movie, such as R,PG-13,etc therefore the data type chosen when creating the imdb table on Postgreql was # VARCHAR.
-7) run_time: This column comprises the total time of each movie, this data was supposed to be "Time data type", but it wasnt possible, therefore I used # VARCHAR.
-8) tagline	budget: The budget pertains to the financial resources allocated for the overall production and release of the movie. This column was suppose to be INTEGER data type, but its had some non-integer datas in it that needed to be cleaned. Since I wanted to use SQL to do all data cleaning and not excel, I had to use VARCHAR as the data type to create the table.
-9) box_office: Box office refers to the total amount of money generated from ticket sales for a particular movie or event. This column also was suppose to be INTEGER data type, but its had some non-integer datas in it that needed to be cleaned. Since I wanted to use SQL to do all data cleaning and not excel, I had to use VARCHAR as the data type to create the table.
-10) casts: This column comprises all the cast of each movie, therefore the data type chosen when creating the imdb table on Postgreql was # VARCHAR.
-11) directors: This column comprises directors, there were more than one director for some movie, therefore the data type chosen when creating the imdb table on Postgreql was # VARCHAR.
-12) writers: This column comprises writers, there were more than one director for some movie, therefore the data type chosen when creating the imdb table on Postgreql was # VARCHAR.
+See below link for Data dictionary [Uploading IMDB DATA DICTIONARY.txt…]()
+
 * SEE QUERY BELOW
   
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/b73347a7-2447-450f-ade6-95a9b326729b)
