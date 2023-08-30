@@ -31,7 +31,7 @@ I answered this questions by:
 * The ultimate objective is to achieve clean and refined data that is suitable for in-depth analysis. This will enable us to derive precise and significant insights from the data, facilitating accurate decision-making and meaningful discoveries.
 
 # Data Dictionary
-See below link for Data dictionary [Uploading IMDB DATA DICTIONARY.txt…]()
+See below link for Data dictionary [IMDB DATA DICTIONARY.txt](https://github.com/MazeedahOloko/IMDB-DATA-ANALYSIS/files/12476279/IMDB.DATA.DICTIONARY.txt)
 
 * SEE QUERY BELOW
   
