@@ -119,9 +119,10 @@ FROM imdb;
 
 
 
-# 2) Box Office column 
-   
-    BOX OFFICE means the total sales from tickets of movies. The purpose of doing data cleaning in the box office column is same as the budget column above, the presence of symbols would make analysis impossible for accurate calculation purposesThis analysis is important because. S I need this analysis to compare budget to sales(profit), which would be the next analysis after this.
+# 3) Box Office column 
+
+    BOX OFFICE means the total sales from tickets of movies. The purpose of doing data cleaning in the box office column is same as the budget column above, the presence of symbols would make analysis impossible for accurate calculation purposesThis analysis is important because. I need this analysis to compare budget to sales(profit), which would be the next analysis after this.
+    
    * Firstly did a query to see if there are empty cells( NULL), blanks before a digit and if there are non digit characters in the box_office column for data cleaning.
 ```SELECT box_office
    FROM imdb
