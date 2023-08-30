@@ -1,22 +1,32 @@
-[IMDB DATA DICTIONARY.txt](https://github.com/MazeedahOloko/IMDB-DATA-ANALYSIS/files/12476268/IMDB.DATA.DICTIONARY.txt)# IMDB DATA ANALYSIS
+# IMDB DATA ANALYSIS
 
 # INTRODUCTION
-
 
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/8efe16c4-4299-4bb4-94c0-990a154e93c1)
 
 
-The Internet Movie Database (IMDb) is the largest, most comprehensive movie database on the web. It offers an extensive database of movie, TV show, and cast information. The site was officially launched in 1990 and is now owned by Amazon.com. IMDb is an extremely detailed and rich source of film data that features top movies, news, reviews, movie trailers, showtimes, DVD movie reviews, celebrity profiles, and more. If you’ve ever researched a movie or actor, you’ve probably landed on IMDb. The primary objective of this project was to analyze the data in order to gain insights into IMDB (Internet Movie Database) and provide suggestions for potential improvements, aiming for the growth and expansion of the platform. Through the analysis, we sought to uncover valuable information and propose actionable recommendations to enhance the overall performance and user experience of IMDB.
-
-# PROBLEM STATEMENT
-
-The IMDB dataset is a collection of 250movies in the IMDB database ranging between several years. It contains a wide range of information about movie name, year,rating,genre,certificate,run_time,tagline,budget,box_office,casts,directors and writers of each movie. The dataset is designed to help analysts and researchers better understand the IMDB database and also make suggestion for improvement. I got the dataset from [Kaggle.com](https://www.kaggle.com/)
-
-Data set: 
+The Internet Movie Database (IMDb) is the largest, most comprehensive movie database on the web. It offers an extensive database of movie, TV show, and cast information. The site was officially launched in 1990 and is now owned by Amazon.com. IMDb is an extremely detailed and rich source of film data that features top movies, news, reviews, movie trailers, showtimes, DVD movie reviews, celebrity profiles, and more. If you’ve ever researched a movie or actor, you’ve probably landed on IMDb. The primary objective of this project is to execute meticulous data cleansing processes aimed at achieving optimal data quality.
+The dataset was sourced from [Kaggle.com](https://www.kaggle.com/), a prominent platform for data science and machine learning enthusiasts. Kaggle is renowned for providing a hub where datasets, competitions, and valuable insights converge. The dataset I obtained from this platform forms the foundation of our project,, providing the raw material from which we initiate comprehensive data cleansing processes. These processes are essential for refining and enhancing the quality of the dataset, ensuring that our subsequent analyses are built on a solid and reliable foundation.
+* Data set: 
 [IMDB Top 250 Movies.csv](https://github.com/MazeedahOloko/IMDB-/files/12443692/IMDB.Top.250.Movies.csv)
 
 Data pervades every aspect of our lives, yet in its raw form, it is often inadequate for deriving valuable insights that effectively address business challenges. Therefore, when data is collected, it is crucial to undergo the process of data cleaning. By ensuring data cleanliness, productivity is enhanced, and the decision-making process benefits from the availability of high-quality information. In this project, I undertook a Data Cleaning Project using SQL to further develop my data manipulation skills.
-In this project, my objective is to improve my data cleaning and also my SQL query applivation. I will accomplish this by addressing the following business questions and providing comprehensive answers and recommendations:
+In this project, my main is to improve my data cleaning skills and strengthening my proficiency in executing SQL queries. This objective will be achieved through a meticulous approach to data cleansing, wherein I will focus on refining and enhancing the quality of the dataset. By methodically addressing data inconsistencies, inaccuracies, and irregularities, I will ensure that the information at hand is reliable and accurate.
+To accomplish this, I will actively engage with the following key business questions. Each question will be thoroughly explored, and detailed answers along with practical recommendations will be provided:
+
+* Data Accuracy Enhancement: How can data inaccuracies be identified and rectified efficiently, ensuring a more reliable dataset?
+
+* Handling Missing Values: What strategies can be employed to effectively manage missing data points, minimizing their impact on analyses and results?
+
+* Standardizing Data Formats: How can disparate data formats be standardized for consistency, enabling seamless integration and analysis?
+
+* Dealing with Outliers: What approach should be taken to identify and handle outliers that could potentially skew the analysis?
+
+* Resolving Data Type Inconsistencies: How can discrepancies in data types be addressed to prevent computational errors and enhance query accuracy?
+
+* Ensuring Data Integrity: What measures can be adopted to ensure that the dataset remains accurate and cohesive during the cleaning process?
+
+By meticulously addressing these questions and implementing tailored solutions, I will fortify my data cleaning skills and adeptness in executing SQL queries. This project will serve as a valuable learning experience, equipping me with the practical knowledge needed to enhance data quality and derive meaningful insights through effective data preparation.
 1. TO KNOW WHICH YEAR MOVIES WAS RELEASED
 2. TO KNOW GENRE OF MOVIES RELEASED THE MOST
 3. TOP 10 MOVIES WITH THE HIGHEST RATING AND THE YEAR
@@ -31,7 +41,7 @@ I answered this questions by:
 * The ultimate objective is to achieve clean and refined data that is suitable for in-depth analysis. This will enable us to derive precise and significant insights from the data, facilitating accurate decision-making and meaningful discoveries.
 
 # Data Dictionary
-See below link for Data dictionary [IMDB DATA DICTIONARY.txt](https://github.com/MazeedahOloko/IMDB-DATA-ANALYSIS/files/12476279/IMDB.DATA.DICTIONARY.txt)
+See text file for Data dictionary [IMDB DATA DICTIONARY.txt](https://github.com/MazeedahOloko/IMDB-DATA-ANALYSIS/files/12476279/IMDB.DATA.DICTIONARY.txt)
 
 * SEE QUERY BELOW
   
