@@ -5,14 +5,11 @@
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/8efe16c4-4299-4bb4-94c0-990a154e93c1)
 
 The Internet Movie Database (IMDb) is the largest, most comprehensive movie database on the web. It offers an extensive database of movie, TV show, and cast information. The site was officially launched in 1990 and is now owned by Amazon.com. IMDb is an extremely detailed and rich source of film data that features top movies, news, reviews, movie trailers, showtimes, DVD movie reviews, celebrity profiles, and more. If you’ve ever researched a movie or actor, you’ve probably landed on IMDb. The primary objective of this project is to execute meticulous data cleansing processes aimed at achieving optimal data quality.
-The dataset was sourced from [Kaggle.com](https://www.kaggle.com/), a prominent platform for data science and machine learning enthusiasts. Kaggle is renowned for providing a hub where datasets, competitions, and valuable insights converge. The dataset I obtained from this platform forms the foundation of this project, providing the raw material from which we initiate comprehensive data cleansing processes. These processes are essential for refining and enhancing the quality of the dataset, ensuring that our subsequent analyses are built on a solid and reliable foundation.
+Data pervades every aspect of our lives, yet in its raw form, it is often inadequate for deriving valuable insights that effectively address business challenges. Therefore, when data is collected, it is crucial to undergo the process of data cleaning. By ensuring data cleanliness, productivity is enhanced, and it also enhance the decision-making process. The dataset which forms the foundation of this project was sourced from [Kaggle.com](https://www.kaggle.com/), a prominent platform for data science and machine learning enthusiasts. Kaggle is renowned for providing a hub where datasets, competitions, and valuable insights converge, providing the raw material from which we initiate comprehensive data cleansing processes. 
 * Data set: 
 [IMDB Top 250 Movies.csv](https://github.com/MazeedahOloko/IMDB-/files/12443692/IMDB.Top.250.Movies.csv)
 
-Data pervades every aspect of our lives, yet in its raw form, it is often inadequate for deriving valuable insights that effectively address business challenges. Therefore, when data is collected, it is crucial to undergo the process of data cleaning. By ensuring data cleanliness, productivity is enhanced, and it also enhance the decision-making process. In this project, I undertook a Data Cleaning Project using SQL to further develop my data manipulation skills.
-To accomplish this, I will actively clean 3 columns in data that requires cleaning. This will help me fortify my data cleaning skills and my deptness in executing SQL queries. This project will serve as a valuable learning experience, equipping me with the practical knowledge needed to enhance data quality and derive meaningful insights through effective data preparation.
-
-I acheived this data cleaning by:
+In this project, I undertook a Data Cleaning Project using SQL to further develop my data manipulation skills. I acheived this data cleaning by:
 * Verifying for misspellings, duplicate entries and other errors. 
 * Validating that the appropraite data type is assigned to each column.
 * Eliminating irrelevant or redundant entries.
@@ -120,8 +117,7 @@ FROM imdb;
 
 
 # 3) Box Office column 
-
-    BOX OFFICE means the total sales from tickets of movies. The purpose of doing data cleaning in the box office column is same as the budget column above, the presence of symbols would make analysis impossible for accurate calculation purposesThis analysis is important because. I need this analysis to compare budget to sales(profit), which would be the next analysis after this.
+     Box office means the total sales from tickets of movies. The purpose of doing data cleaning in the box office column is same as the budget column above, the presence of symbols would make analysis impossible for accurate calculation purposes.
     
    * Firstly did a query to see if there are empty cells( NULL), blanks before a digit and if there are non digit characters in the box_office column for data cleaning.
 ```SELECT box_office
@@ -143,11 +139,13 @@ FROM imdb;
 ```
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/7bf58490-f45e-46a0-bd45-f16dd6a2df38)
 
-
+In all honesty, 
+But, I can tell you this: going through all of this really boosted my skills in cleaning up data and working with SQL. I'm getting the hang of dealing with complicated data tasks, that's for sure. This whole project taught me a bunch and I'm walking away with practical knowledge on how to get data prepped up nice and proper, so we can pull out some real insights from it.
 
 
 # CONCLUSION
-In conclusion, tackling this dataset proved to be a formidable challenge, especially given that it was my first experience with data cleaning. However, I can confidently state that the process significantly enhanced both my data cleansing skills and my proficiency in crafting effective SQL queries. This experience has undoubtedly contributed to my growth in handling complex data tasks.
+In conclusion,  dealing with this dataset was quite a challenge, especially since it was my first time handling data cleaning. Data cleaning is super important to make sure the dataset is good to go. It's like laying down a strong foundation for later analysis. For example, fixing up the profit numbers was a must. If we didn't clean the data, trying to add up profits would be a mess as a result of the presence of symbols which wouldnt be included in our summation.
+However, I can confidently state that the process significantly enhanced both my data cleansing skills and my proficiency in crafting effective SQL queries. This experience has undoubtedly contributed to my growth in handling complex data tasks. This project will serve as a valuable learning experience, equipping me with the practical knowledge needed to enhance data quality and derive meaningful insights through effective data preparation. 
 
 
 
