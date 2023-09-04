@@ -23,7 +23,8 @@ See text file for Data dictionary [IMDB DATA DICTIONARY.txt](https://github.com/
 
 # DATA CLEANING
 
-https://www.thedataschool.com.au/wp-content/uploads/2023/04/img2.jpeg
+![image](https://github.com/MazeedahOloko/IMDB-DATA-ANALYSIS/assets/128734036/0e6c1a79-6c67-4933-8ffc-ee340ca96d4f)
+
 
 # 1) Genre column
    The purpose of doing data cleaning in the genre column was because of the comma between each genre in each row, i.e a movie can be categorize into having different genre, I wanted to be able to split it in such a way that all the genre aren't in one column. There was a lot of data cleaning here, I had to first split the genre column into three column to understand what to do, this is because the comma already joined all the genre as one and I wasnt pleased with the result of using this code:  
