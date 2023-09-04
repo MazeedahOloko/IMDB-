@@ -90,7 +90,7 @@ See text file for Data dictionary [IMDB DATA DICTIONARY.txt](https://github.com/
 
 # 2) Budget Column
    
-   The purpose of doing data cleaning in the budget column was because of the presence of non-numeric characters such as symbols, what this means is that I would be unable to perform any mathematical calculation on budget as the DATA type isnt be numeric. I invested significant effort in refining this figure through a series of data cleaning steps.
+   The purpose of doing data cleaning in the budget column was because of the presence of non-numeric characters such as symbols, what this means is that I would be unable to perform any mathematical calculation on budget as the DATA type isnt numeric. I invested significant effort in refining this figure through a series of data cleaning steps.
    * To begin, I meticulously examined the budget figures to identify and address any instances of non-numeric characters.
      
 ```SELECT budget
@@ -119,7 +119,7 @@ FROM imdb;
 # 3) Box Office column 
      Box office means the total sales from tickets of movies. The purpose of doing data cleaning in the box office column is same as the budget column above, the presence of symbols would make analysis impossible for accurate calculation purposes.
     
-   * Firstly did a query to see if there are empty cells( NULL), blanks before a digit and if there are non digit characters in the box_office column for data cleaning.
+   * I did a query to see if there are empty cells( NULL), blanks before a digit and if there are non digit characters in the box_office column for data cleaning.
 ```SELECT box_office
    FROM imdb
    WHERE box_office <> '' AND TRIM(box_office)<> '' AND box_office ~ '\D';
@@ -139,13 +139,14 @@ FROM imdb;
 ```
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/7bf58490-f45e-46a0-bd45-f16dd6a2df38)
 
-In all honesty, 
-But, I can tell you this: going through all of this really boosted my skills in cleaning up data and working with SQL. I'm getting the hang of dealing with complicated data tasks, that's for sure. This whole project taught me a bunch and I'm walking away with practical knowledge on how to get data prepped up nice and proper, so we can pull out some real insights from it.
+
 
 
 # CONCLUSION
 In conclusion,  dealing with this dataset was quite a challenge, especially since it was my first time handling data cleaning. Data cleaning is super important to make sure the dataset is good to go. It's like laying down a strong foundation for later analysis. For example, fixing up the profit numbers was a must. If we didn't clean the data, trying to add up profits would be a mess as a result of the presence of symbols which wouldnt be included in our summation.
 However, I can confidently state that the process significantly enhanced both my data cleansing skills and my proficiency in crafting effective SQL queries. This experience has undoubtedly contributed to my growth in handling complex data tasks. This project will serve as a valuable learning experience, equipping me with the practical knowledge needed to enhance data quality and derive meaningful insights through effective data preparation. 
+
+![image](https://github.com/MazeedahOloko/IMDB-DATA-ANALYSIS/assets/128734036/e37e031f-902b-4a60-8888-3c98ca6b96cb)
 
 
 
