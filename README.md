@@ -4,8 +4,8 @@
 
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/8efe16c4-4299-4bb4-94c0-990a154e93c1)
 
-The Internet Movie Database (IMDb) is the largest, most comprehensive movie database on the web. It offers an extensive database of movie, TV show, and cast information. The site was officially launched in 1990 and is now owned by Amazon.com. IMDb is an extremely detailed and rich source of film data that features top movies, news, reviews, movie trailers, showtimes, DVD movie reviews, celebrity profiles, and more. If you’ve ever researched a movie or actor, you’ve probably landed on IMDb. The primary objective of this project is to execute meticulous data cleansing processes aimed at achieving optimal data quality.
-Data pervades every aspect of our lives, yet in its raw form, it is often inadequate for deriving valuable insights that effectively address business challenges. Therefore, when data is collected, it is crucial to undergo the process of data cleaning. By ensuring data cleanliness, productivity is enhanced, and it also enhance the decision-making process. The dataset which forms the foundation of this project was sourced from [Kaggle.com](https://www.kaggle.com/), a prominent platform for data science and machine learning enthusiasts. Kaggle is renowned for providing a hub where datasets, competitions, and valuable insights converge, providing the raw material from which we initiate comprehensive data cleansing processes. 
+Data pervades every aspect of our lives, yet in its raw form, it is often inadequate for deriving valuable insights that effectively address business challenges. Therefore, when data is collected, it is crucial to undergo the process of data cleaning. By ensuring data cleanliness, productivity is enhanced, and it also enhance the decision-making process. The dataset which forms the foundation of this project was sourced from [Kaggle.com](https://www.kaggle.com/), a prominent platform for data science and machine learning enthusiasts. Kaggle is renowned for providing a hub where datasets, competitions, and valuable insights converge, providing the raw material from which we initiate comprehensive data cleansing processes.  The dataset pertains to information of The Internet Movie Database (IMDb), IMDb is the largest, most comprehensive movie database on the web. It offers an extensive database of movie, TV show, and cast information. The site was officially launched in 1990 and is now owned by Amazon.com. IMDb is an extremely detailed and rich source of film data that features top movies, news, reviews, movie trailers, showtimes, DVD movie reviews, celebrity profiles, and more. If you’ve ever researched a movie or actor, you’ve probably landed on IMDb. The primary objective of this project is to execute meticulous data cleansing processes aimed at achieving optimal data quality.
+
 * Data set: 
 [IMDB Top 250 Movies.csv](https://github.com/MazeedahOloko/IMDB-/files/12443692/IMDB.Top.250.Movies.csv)
 
@@ -22,6 +22,8 @@ See text file for Data dictionary [IMDB DATA DICTIONARY.txt](https://github.com/
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/b73347a7-2447-450f-ade6-95a9b326729b)
 
 # DATA CLEANING
+
+https://www.thedataschool.com.au/wp-content/uploads/2023/04/img2.jpeg
 
 # 1) Genre column
    The purpose of doing data cleaning in the genre column was because of the comma between each genre in each row, i.e a movie can be categorize into having different genre, I wanted to be able to split it in such a way that all the genre aren't in one column. There was a lot of data cleaning here, I had to first split the genre column into three column to understand what to do, this is because the comma already joined all the genre as one and I wasnt pleased with the result of using this code:  
@@ -126,8 +128,7 @@ Box office means the total sales from tickets of movies. The purpose of doing da
    WHERE box_office <> '' AND TRIM(box_office)<> '' AND box_office ~ '\D';
 ```
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/d6a8b034-41b7-47d5-89b8-4012f4030e32)
-
-    *Query to clean the data:
+* Query to clean the data
 ```SELECT SUM(
          CASE 
              WHEN box_office = 'Not Available' THEN NULL 
