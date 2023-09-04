@@ -127,7 +127,7 @@ Box office means the total sales from tickets of movies. The purpose of doing da
 ```
 ![image](https://github.com/MazeedahOloko/IMDB-/assets/128734036/d6a8b034-41b7-47d5-89b8-4012f4030e32)
 
-    * Query to clean the data:
+    *Query to clean the data:
 ```SELECT SUM(
          CASE 
              WHEN box_office = 'Not Available' THEN NULL 
